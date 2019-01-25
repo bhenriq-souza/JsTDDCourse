@@ -7,6 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/.bin/eslint src/*.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm lint"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bhenriq-souza/JsTDDCourse.git"
@@ -20,6 +25,7 @@
   "devDependencies": {
     "eslint": "^5.12.1",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.15.0"
+    "eslint-plugin-import": "^2.15.0",
+    "husky": "^1.3.1"
   }
 }
